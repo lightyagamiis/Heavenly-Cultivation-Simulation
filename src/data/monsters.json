@@ -1,0 +1,48 @@
+[
+    {
+      "name": "Wild Demon",
+      "level": 1,
+      "health": 80,
+      "attack": 15,
+      "defense": 3,
+      "magic": 10,
+      "experience": 20
+    },
+    {
+      "name": "Forest Spirit",
+      "level": 2,
+      "health": 100,
+      "attack": 10,
+      "defense": 5,
+      "magic": 20,
+      "experience": 30
+    },
+    {
+      "name": "Mountain Giant",
+      "level": 3,
+      "health": 150,
+      "attack": 25,
+      "defense": 10,
+      "magic": 5,
+      "experience": 50
+    },
+    {
+      "name": "Sea Serpent",
+      "level": 4,
+      "health": 200,
+      "attack": 30,
+      "defense": 8,
+      "magic": 15,
+      "experience": 70
+    },
+    {
+      "name": "Sky Dragon",
+      "level": 5,
+      "health": 300,
+      "attack": 50,
+      "defense": 20,
+      "magic": 25,
+      "experience": 100
+    }
+  ]
+  

@@ -1,17 +1,16 @@
 [
-    {
-      "name": "Defeat the Wild Demon",
-      "description": "Defeat the Wild Demon terrorizing the village.",
-      "reward": {
-        "experience": 50,
-        "items": [
-          {
-            "name": "Demon Claw",
-            "attack": 5,
-            "defense": 2
-          }
-        ]
-      }
+  {
+    "name": "Defeat the Wild Demon",
+    "description": "Defeat the Wild Demon terrorizing the village.",
+    "reward": {
+      "experience": 50,
+      "items": [
+        {
+          "name": "Demon Claw",
+          "attack": 5,
+          "defense": 2
+        }
+      ]
     }
-  ]
-  
+  }
+]

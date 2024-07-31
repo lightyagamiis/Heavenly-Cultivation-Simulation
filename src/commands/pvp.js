@@ -1,13 +1,12 @@
 const fs = require('fs');
 const path = require('path');
-const battleUtils = require('../utils/battleUtils');
-const characterUtils = require('../utils/characterUtils');
+const pvpUtils = require('../utils/pvpUtils');
 
-module.exports = (bot, msg) => {
+module.exports = (bot, msg, opponentId) => {
   const chatId = msg.chat.id;
-
   const characters = JSON.parse(fs.readFileSync(path.join(__dirname, '../data/characters.json')));
   const userCharacter = characters.find(char => char.id === msg.from.id);
+  const opponentCharacter = characters.find(char => char.id === opponentId);
 
   if (!userCharacter) {
     bot.sendMessage(chatId, 'You need to create a character first! Use the button below.', {
@@ -20,16 +19,22 @@ module.exports = (bot, msg) => {
     return;
   }
 
-  const monster = battleUtils.createMonster();
+  if (!opponentCharacter) {
+    bot.sendMessage(chatId, 'Opponent not found.');
+    return;
+  }
 
-  const battleResult = battleUtils.fight(userCharacter, monster);
+  const battleResult = pvpUtils.fight(userCharacter, opponentCharacter);
 
   if (battleResult.winner === 'character') {
     userCharacter.experience += battleResult.experienceGained;
-    characterUtils.levelUpCharacter(userCharacter);
-    fs.writeFileSync(path.join(__dirname, '../data/characters.json'), JSON.stringify(characters, null, 2));
+    opponentCharacter.experience += battleResult.experienceLost;
+  } else {
+    opponentCharacter.experience += battleResult.experienceGained;
+    userCharacter.experience += battleResult.experienceLost;
   }
 
+  fs.writeFileSync(path.join(__dirname, '../data/characters.json'), JSON.stringify(characters, null, 2));
   bot.sendMessage(chatId, battleResult.message, {
     reply_markup: {
       inline_keyboard: [

@@ -1,24 +1,26 @@
 [
-    {
-      "level": 30,
-      "newJob": "Warrior",
-      "health": 150,
-      "attack": 50,
-      "defense": 30
-    },
-    {
-      "level": 60,
-      "newJob": "Knight",
-      "health": 300,
-      "attack": 100,
-      "defense": 60
-    },
-    {
-      "level": 90,
-      "newJob": "Paladin",
-      "health": 450,
-      "attack": 150,
-      "defense": 90
-    }
-  ]
-  
+  {
+    "level": 30,
+    "newJob": "Warrior",
+    "health": 150,
+    "attack": 50,
+    "defense": 30,
+    "magic": 20
+  },
+  {
+    "level": 60,
+    "newJob": "Knight",
+    "health": 300,
+    "attack": 100,
+    "defense": 60,
+    "magic": 40
+  },
+  {
+    "level": 90,
+    "newJob": "Paladin",
+    "health": 450,
+    "attack": 150,
+    "defense": 90,
+    "magic": 60
+  }
+]

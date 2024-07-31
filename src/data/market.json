@@ -1,0 +1,17 @@
+[
+    {
+      "name": "Sword of Light",
+      "price": 100,
+      "attack": 20,
+      "defense": 10,
+      "magic": 5
+    },
+    {
+      "name": "Shield of Darkness",
+      "price": 150,
+      "attack": 10,
+      "defense": 30,
+      "magic": 0
+    }
+  ]
+  

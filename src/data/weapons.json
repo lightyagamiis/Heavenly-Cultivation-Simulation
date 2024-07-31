@@ -1,0 +1,38 @@
+[
+    {
+      "name": "Sword of Light",
+      "attack": 20,
+      "defense": 10,
+      "magic": 5,
+      "rarity": "legendary"
+    },
+    {
+      "name": "Shield of Darkness",
+      "attack": 10,
+      "defense": 30,
+      "magic": 0,
+      "rarity": "legendary"
+    },
+    {
+      "name": "Staff of Wisdom",
+      "attack": 5,
+      "defense": 5,
+      "magic": 30,
+      "rarity": "mythical"
+    },
+    {
+      "name": "Dagger of Shadows",
+      "attack": 25,
+      "defense": 5,
+      "magic": 10,
+      "rarity": "rare"
+    },
+    {
+      "name": "Bow of the Phoenix",
+      "attack": 30,
+      "defense": 5,
+      "magic": 15,
+      "rarity": "legendary"
+    }
+  ]
+  

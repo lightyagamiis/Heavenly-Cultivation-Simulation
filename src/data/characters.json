@@ -1,14 +1,47 @@
 [
   {
-    "id": "40ee63e3-cbe4-48be-8e0b-6c459e6836bf",
-    "name": "shin",
-    "race": "diety",
+    "id": "e83f8114-d720-4214-98f6-e9e14173167f",
+    "name": "Adi",
+    "race": "elf",
+    "class": "mage",
+    "level": 1,
+    "experience": 0,
+    "health": 200,
+    "attack": 3000,
+    "defense": 72837,
+    "magic": 82737,
+    "skills": [],
+    "inventory": [],
+    "quests": [],
+    "job": "Novice",
+    "guild": null
+  },
+  {
+    "id": "929b49a5-7cec-48d8-9673-43a833a4825f",
+    "name": "Tanjiro",
+    "race": "demon",
+    "class": "warrior",
     "level": 1,
     "experience": 0,
     "health": null,
     "skills": [],
     "inventory": [],
     "quests": [],
-    "job": "Novice"
+    "job": "Novice",
+    "guild": null
+  },
+  {
+    "id": "6d52f620-3b2a-4efd-b463-744d60c08b44",
+    "name": "light",
+    "race": "deity",
+    "class": "warrior",
+    "level": 1,
+    "experience": 0,
+    "health": 999,
+    "skills": [],
+    "inventory": [],
+    "quests": [],
+    "job": "Novice",
+    "guild": null
   }
 ]

@@ -1,22 +1,56 @@
 const TelegramBot = require('node-telegram-bot-api');
 
-// Replace with your actual bot token
-const token = '7175502611:AAEs2atuRP-xIiyeddF_LVP8E-XERxZugdU';
-const bot = new TelegramBot(token, { polling: true });
+// Replace 'YOUR_BOT_TOKEN' with your actual bot token
+const botToken = '7175502611:AAEs2atuRP-xIiyeddF_LVP8E-XERxZugdU';
+
+const bot = new TelegramBot(botToken, { polling: true });
 
 bot.onText(/\/start/, (msg) => {
   const chatId = msg.chat.id;
-  bot.sendMessage(chatId, 'Welcome to the Cultivation Manhua Bot! Type /createCharacter to begin your journey.');
+  bot.sendMessage(chatId, 'Welcome to the Ultimate Cultivation Universe Bot! Tap the button below to begin your journey.', {
+    reply_markup: {
+      inline_keyboard: [
+        [{ text: "Create Character", callback_data: "create_character" }]
+      ]
+    }
+  });
 });
 
-// Import other commands
-require('./commands/createCharacter')(bot);
-require('./commands/viewCharacter')(bot);
-require('./commands/battle')(bot);
-require('./commands/inventory')(bot);
-require('./commands/storyProgression')(bot);
-require('./commands/quest')(bot);
-require('./commands/levelUp')(bot);
-require('./commands/jobChange')(bot);
+// Inline query handler
+bot.on("callback_query", (callbackQuery) => {
+  const msg = callbackQuery.message;
+  const data = callbackQuery.data;
+
+  switch (data) {
+    case "create_character":
+      require('./commands/createCharacter')(bot, msg);
+      break;
+    case "menu":
+      require('./commands/menu')(bot, msg);
+      break;
+    case "view_character":
+      require('./commands/viewCharacter')(bot, msg);
+      break;
+    case "battle":
+      require('./commands/battle')(bot, msg);
+      break;
+    case "quests":
+      require('./commands/quest')(bot, msg);
+      break;
+    case "inventory":
+      require('./commands/inventory')(bot, msg);
+      break;
+    case "guild":
+      require('./commands/guild')(bot, msg);
+      break;
+    case "marketplace":
+      require('./commands/marketplace')(bot, msg);
+      break;
+    case "world_events":
+      require('./commands/worldEvents')(bot, msg);
+      break;
+    // Add more cases for other commands
+  }
+});
 
 module.exports = bot;

@@ -1,0 +1,15 @@
+[
+    {
+      "name": "Demon Invasion",
+      "description": "Demons are invading the land. Defeat them to earn special rewards!",
+      "startTime": "2024-07-01T00:00:00Z",
+      "endTime": "2024-07-07T23:59:59Z"
+    },
+    {
+      "name": "Festival of Light",
+      "description": "Celebrate the Festival of Light with special quests and rewards!",
+      "startTime": "2024-08-01T00:00:00Z",
+      "endTime": "2024-08-07T23:59:59Z"
+    }
+  ]
+  
